@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = parseInt(process.env.SERVER_PORT, 10) || 8080;
+const port = parseInt(process.env.SERVER_PORT, 10) || 8100;
 
 app.use(express.static('./www'));
 
