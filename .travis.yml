@@ -7,10 +7,11 @@ branches:
   - main
 
 services:
-  ionic
+  npm
   docker
 
 script:
+  - npm i -g ionic@6.12.3
   - ionic -v
   - ionic build
   - docker --version
