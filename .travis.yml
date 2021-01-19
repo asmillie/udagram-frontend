@@ -2,10 +2,17 @@ language: node_js
 node_js:
   - 12.18.3
 
+branches:
+  only:
+  - main
+
 services:
+  ionic
   docker
 
 script:
+  - ionic -v
+  - ionic build
   - docker --version
   - docker build -t udagram-frontend
   - docker tag udagram-frontend elsrickle/udagram-frontend:latest
